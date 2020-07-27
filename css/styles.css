@@ -1,8 +1,36 @@
-.carousel-item {
+/*.carousel-item {
     height: 300px;
 }
 
 .carousel-item img {
     height: 300px;
     width: 200px;
+}*/
+a.main-btn{
+    color: white;
+    text-decoration: none;
+}
+
+.carousel-inner, .carousel-item{
+    max-height: 60vh;
+}
+
+.bg-img{
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 500ms ease-in;
+    -moz-transition: background-size 500ms ease-in;
+    -ms-transition: background-size 500ms ease-in;
+    -o-transition: background-size 500ms ease-in;
+    -webkit-transition: background-size 500ms ease-in;
+}
+
+.bg-img:hover{
+    background-size: 120%;
+}
+
+.bg-shadow{
+    background-color: rgba(0, 0, 0, 0.2)
 }

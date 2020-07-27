@@ -25,9 +25,10 @@
 </head>
 
 <body>
+    <header>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">DevNews</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,14 +45,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contato.html">Contato</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="page3.html">Page 3</a>
-                </li>
             </ul>
         </div>
     </nav>
-    <!-- Main -->
-    <main>
+    </header>
+
+    <main class="bg-light">
         <!--Carousel-->
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -61,21 +60,23 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="resourses/img/teste1.png" class="d-block w-100" alt="...">
+                    <img src="resourses/img/teste1.png" class="d-block img-fluid" alt="..."/>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <a href="#" class="main-btn">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="resourses/img/teste2.jpg" class="d-block w-100" alt="...">
+                    <img src="resourses/img/teste2.jpg" class="d-block img-fluid" alt="..."/>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="resourses/img/teste3.jpg" class="d-block w-100" alt="...">
+                    <img src="resourses/img/teste3.jpg" class="d-block img-fluid" alt="..."/>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -92,10 +93,40 @@
             </a>
         </div>
         <div class="container">
-            <Section class="border bg-danger" style="height: 200px;">
+            <!-- Media object -->
+            <div class="media shadow my-4 bg-img" style="background-image: url(resourses/img/noticia1.jpg);">
+                <div class="bg-shadow">
+                    <div class="media-body px-3 mt-5">
+                    <h4>FOTOS DESLUMBRANTES</h4>
+                    <p>Cometa NEOWISE é fotografado por brasileiros; veja imagens de tirar o fôlego</p>
+                    </div>
+                </div>
+            </div>
 
-            </Section>
-            <section class="border bg-secondary" style="height: 200px;"></section>
+            <div class="media shadow my-4 bg-img" style="background-image: url(resourses/img/noticia2.jpg);">
+                <div class="bg-shadow">
+                    <div class="media-body px-3 mt-5">
+                    <h4>MANDA JOBS</h4>
+                    <p>Seleção das melhores vagas de emprego em tecnologia (27/07/2020)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media shadow my-4 p-3 bg-white">
+                <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px">
+                <div class="media-body">
+                <h4>Título da notícia 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda impedit quod odit, quasi qui sit cum quos exercitationem distinctio est.</p>
+                </div>
+            </div>
+
+            <div class="media shadow my-4 p-3 bg-white">
+                <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px">
+                <div class="media-body">
+                <h4>Título da notícia 4</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda impedit quod odit, quasi qui sit cum quos exercitationem distinctio est.</p>
+                </div>
+            </div>
         </div>
 
     </main>
