@@ -8,9 +8,11 @@
 
     <!-- Bootstrap CSS Local-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <!--Font awesome-->
+     <script src="https://kit.fontawesome.com/99d10d1398.js" crossorigin="anonymous"></script> 
 
    
-    <title>Document</title>
+    <title>DevNews - Contato</title>
 </head>
 
 <body>
@@ -61,28 +63,28 @@
           
     </main>
 
-    <form class = "container">
+    <form id = "formulario" class = "container pb-3">
 
         <div class="row pb-3">
           <div class="col-sm-4">
            <strong> <label for="inputPrimeiroNome">Nome</label></strong>
-            <input type="text" class="form-control" placeholder="Primeiro Nome" id= "inputPrimeiroNome">
+            <input required type="text" class="form-control" placeholder="Primeiro Nome" id= "inputPrimeiroNome">
           </div>
           <div class="col-sm-8">
-            <label for="inputSobrenome">Sobrenome</label>
-            <input type="text" class="form-control required" placeholder="Sobrenome">
+            <label for="inputSobrenome"><strong> Sobrenome </strong></label>
+            <input required type="text" class="form-control required" placeholder="Sobrenome">
           </div>
         </div>
 
         <div class="row">
             <div class="col-md-8  ">
-              <label for="inputEmail">Email</label>
+              <label for="inputEmail"><strong>Email</strong></label>
               <input required type="email" class="form-control" placeholder="Digite seu email" id= "inputEmail">
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Motivo do contato</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="seletorMotivo"><strong>Motivo do contato</strong></label>
+                    <select class="form-control" id="seletorMotivo">
                       <option>Dúvidas</option>
                       <option>Sugestões</option>
                       <option>Reclamações</option>
@@ -91,17 +93,95 @@
                 </div>    
             </div>
         </div>
-       
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form> 
 
-    <!-- Footer -->
-    <footer>
-        <h1>Here is the footer</h1>
-    </footer>
+        <div class = "row pb-3">
+          <div class = "col-md-10">
+            <label for="inputMensagem"><strong>Mensagem</strong></label>
+            <textarea required style="resize: none" class="form-control" id="inputMensagem" rows="5"></textarea>
+          </div>
+        </div>
+
+        
+        <button id = "botaoSubmit" type="submit" class="btn btn-primary" onclick="checkValidation()">Submit</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Obrigado !</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="./resourses/img/thumbs-up.png" class="img-fluid" alt="Responsive image">
+                <main>  <p> Deseja Confirmar a submissão ?</p></main>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                <button onclick="realSubmit()" type="submit" class="btn btn-primary">Sim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </form> 
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small teal pt-4 bg-success " style="opacity: 0.5;">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Equipe de Desenvolvimento</h5>
+        <h6>Silas dos Santos Vergílio</h6>
+        <h6>Lincon</h6>
+        <h6>Gagego</h6>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Github <i class="fab fa-github"></i></i></h5>
+        <a class=" text-warning" href="https://github.com/silasvergilio"> <p>Silas</p> </a>
+        <a class=" text-warning" href="https://github.com/zlincon"> <p>Lincon</p> </a>
+        <a class=" text-warning" href="https://github.com/gagegomaciel"> <p>Gegego</p> </a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Repositório do projeto:
+    <a class=" text-warning" href="https://github.com/zlincon/exercicioBootstrapHtmlCss"> DevNews</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
      <!-- JS, Popper.js, and jQuery-->
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -109,6 +189,41 @@
     </script>
     <script src="js/bootstrap.min.js"></script>
 
+    <script>
+
+
+      $('form').on('submit', function(e){
+    // validation code here
+      e.preventDefault();
+      });
+
+      function checkValidation() {
+      var isValid = true;
+      var regexEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      
+      if($("#inputPrimeiroNome").val() == ""){
+          isValid = false;
+      }
+      if(!(regexEmail.test($("#inputEmail").val()))){
+          isValid = false;
+      }
+      if($("#inputSobrenome").val() == ""){
+          isValid = false;
+      }
+      if($("#inputMensagem").val() == ""){
+          isValid = false;
+      }
+      if(isValid){
+      $('#modalDialog').modal('show');
+      }
+      }
+
+      function realSubmit()
+      {
+        $( "#formulario").unbind( "submit" );
+      }
+     
+    </script>
 
 </body>
 
