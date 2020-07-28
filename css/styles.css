@@ -124,9 +124,9 @@ li {
 
 @media (max-width: 992px) {
     .card-news {
-      flex-wrap: wrap;
-      padding: 15px;
-      margin: 25px auto;
+        flex-wrap: wrap;
+        padding: 15px;
+        margin: 25px auto;
     }
     .img-card {
         max-width: 800px;
