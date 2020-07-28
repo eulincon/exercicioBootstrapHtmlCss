@@ -9,15 +9,6 @@
     <!-- Bootstrap CSS Local-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- JS, Popper.js, and jQuery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-
     <!-- CSS Local -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -60,7 +51,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="resourses/img/teste1.png" class="d-block img-fluid" alt="..." />
+                    <img src="resourses/img/carousel1.jpg" class="d-block img-fluid" alt="imagem1" />
                     <div class="carousel-caption d-none d-md-block">
                         <a href="#" class="main-btn">
                             <h5>First slide label</h5>
@@ -69,14 +60,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="resourses/img/teste2.jpg" class="d-block img-fluid" alt="..." />
+                    <img src="resourses/img/carousel2.jpg" class="d-block img-fluid" alt="imagem2" />
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="resourses/img/teste3.jpg" class="d-block img-fluid" alt="..." />
+                    <img src="resourses/img/carousel3.jpg" class="d-block img-fluid" alt="imagem3" />
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -92,13 +83,15 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="container">
+
+        <!-- Seção notícias-->
+        <section class="container">
             <!-- Media object -->
             <a style="text-decoration: none; color: white"
                 href="https://canaltech.com.br/espaco/cometa-neowise-passa-pelo-brasil-e-e-fotografado-no-ceu-noturno-veja-imagens-168700/">
                 <div class="media shadow my-4 bg-img" style="background-image: url(resourses/img/noticia1.jpg);">
                     <div class="bg-shadow">
-                        <div class="media-body px-3 mt-5 pt-5">
+                        <div class="media-body px-2 mt-5 pt-4">
                             <h4>FOTOS DESLUMBRANTES</h4>
                             <p>Cometa NEOWISE é fotografado por brasileiros; veja imagens de tirar o fôlego</p>
                         </div>
@@ -109,7 +102,7 @@
                 href="https://canaltech.com.br/empregos/manda-jobs-selecao-das-melhores-vagas-de-emprego-em-tecnologia-27072020/">
                 <div class="media shadow my-4 bg-img" style="background-image: url(resourses/img/noticia2.jpg);">
                     <div class="bg-shadow">
-                        <div class="media-body px-3 mt-5 pt-5">
+                        <div class="media-body px-2 mt-5 pt-4">
                             <h4>MANDA JOBS</h4>
                             <p>Seleção das melhores vagas de emprego em tecnologia (27/07/2020)</p>
                         </div>
@@ -122,7 +115,7 @@
                 <div class="media shadow my-4 bg-img"
                     style="background-image: url(https://timeline.canaltech.com.br/353707.1400/comic-con-at-home-2020-veja-um-resumo-do-que-de-melhor-rolou-no-evento.jpg);">
                     <div class="bg-shadow">
-                        <div class="media-body px-3 mt-5 pt-5">
+                        <div class="media-body px-2 mt-5 pt-4">
                             <h4>COMIC CON AT HOME 2020</h4>
                             <p>Comic-Con At Home 2020 | Veja um resumo do que de melhor rolou no evento</p>
                         </div>
@@ -130,18 +123,38 @@
                 </div>
             </a>
 
-            <div class="media shadow my-4 bg-white">
-                <div class="bg-shadow">
-                    <div class="media-body px-3 mt-5">
-                        <h4>Título da notícia 4</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda impedit quod odit, quasi
-                            qui
-                            sit cum quos exercitationem distinctio est.</p>
+            <div class="media shadow my-4 bg-dark">
+                <div class="bg-shadow bg-img">
+                    <div class="media-body px-2 mt-5 pt-4">
+                        <h4>TÍTULO NOTÍCIA 4</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
-        </div>
 
+            <!--Seção vídeos-->
+            <section class="row px-3">
+                <div class="embed-responsive embed-responsive-16by9 col-md-5 my-4">
+                    <iframe width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/HaOOWK14pgs" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9 col-md-5 ml-auto my-4">
+                    <iframe class="embed-responsive-item" 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/Mavt0kj6c4Y" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </section>
     </main>
 
 
@@ -149,6 +162,15 @@
     <footer class="position-sticky bg-dark">
         <h1 class="sticky-bottom">Here is the footer</h1>
     </footer>
+
+    <!-- JS, Popper.js, and jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
