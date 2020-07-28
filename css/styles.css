@@ -11,6 +11,19 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
+.dark {
+    color: #262627;
+}
+
+.ultimas {
+    color: #7F8C8D;
+    margin: 5px 10px;
+}
+
 .carousel-inner,
 .carousel-item {
     max-height: 60vh;
@@ -36,4 +49,102 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2)
+}
+
+.logo {
+    width: 120px;
+}
+
+.card-news {
+    max-width: 1200px;
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.img-card {
+    max-width: 300px;
+}
+
+.card-description {
+    margin: 0 auto;
+    max-width: 765px;
+}
+
+.img-noticia {
+    width: 100%;
+}
+
+.title-noticia {
+    color: #000;
+    transition: ease 0.4s;
+}
+
+.title-noticia:hover {
+    text-decoration: none;
+    color: rgba(3, 23, 185, 0.9)
+}
+
+.descripiton {
+    color: #7F8C8D;
+    font-size: 18px;
+}
+
+.date {
+    color: #080;
+    width: 15px; 
+}
+
+.texto-date {
+    margin: 15px 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.box-img {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.box-img> img {
+    width: 100%;
+}
+
+.box-img> span {
+    color: #7F8C8D;
+    font-style: italic;
+}
+
+.title-inicio {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.contexto {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 5px;
+    line-height: 1.5em;
+}
+
+
+@media (max-width: 992px) {
+    .card-news {
+      flex-wrap: wrap;
+      padding: 15px;
+      margin: 25px auto;
+    }
+    .img-card {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .card-description {
+        margin: 10px auto;
+    }
+    .card-description> ul {
+        padding: 5px;
+    }
+
 }

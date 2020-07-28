@@ -18,7 +18,10 @@
     </script>
     <script src="js/bootstrap.min.js"></script>
 
-    <title>Document</title>
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Últimas notícias</title>
 </head>
 
 <body>
@@ -46,12 +49,65 @@
     </nav>
     <!-- Main -->
     <main>
-        <h1>Main Content <strong>Notícias</strong></h1>
+        <div class="container">
+            <h4 class="ultimas">Últimas notícias</h4>
+            <div class="card-news">
+                <div class="img-card">
+                    <img  class="img-noticia" src="./resourses/img/marte.jpg" alt="Noticia Imagem">
+                </div>
+                <div class="card-description">
+                    <ul>
+                        <li><h3><a class="title-noticia" href="./noticia-01.html">Pedaço de Marte voltará ao planeta em lançamento agendado para quinta</a></h3></li>
+                        <li align="justify" class="descripiton">O meteorito SaU008 faz parte dos instrumentos do rover Perseverance, que deixa a Terra esta semana e pousará no hemisfério norte marciano em fevereiro de 2021</li>
+                        <li class="texto-date"><img class="date" src="./resourses/img/relogio.png" alt="relogio data"> 27/07/2020</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="card-news">
+                <div class="img-card">
+                    <img  class="img-noticia" src="./resourses/img/twitter.jpg" alt="Noticia Imagem">
+                </div>
+                <div class="card-description">
+                    <ul>
+                        <li><h3><a class="title-noticia" href="./noticia-02.html">Colaboradores do Twitter teriam espionado famosos, incluindo Beyoncé</a></h3></li>
+                        <li align="justify" class="descripiton">O Twitter mantém uma equipe de aproximadamente 1500 funcionários e prestadores de serviços com permissão para redefinir senhas, alterar padrões de segurança e obter acesso a dados como endereço de IP.</li>
+                        <li class="texto-date"><img class="date" src="./resourses/img/relogio.png" alt="relogio data"> 27/07/2020</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="card-news">
+                <div class="img-card">
+                    <img  class="img-noticia" src="./resourses/img/google.jpg" alt="Noticia Imagem">
+                </div>
+                <div class="card-description">
+                    <ul>
+                        <li><h3><a class="title-noticia" href="./noticia-03.html">Google admite que recebe dados coletados de celulares Android</a></h3></li>
+                        <li align="justify" class="descripiton">Funcionários da empresa têm acesso a informações confidenciais sobre o uso de aplicativos não pertencentes ao Google</li>
+                        <li class="texto-date"><img class="date" src="./resourses/img/relogio.png" alt="relogio data"> 27/07/2020</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="card-news">
+                <div class="img-card">
+                    <img  class="img-noticia" src="./resourses/img/quantica.jpg" alt="Noticia Imagem">
+                </div>
+                <div class="card-description">
+                    <ul>
+                        <li><h3><a class="title-noticia" href="./noticia-04.html">EUA planejam desenvolver uma internet quântica impossível de hackear</a></h3></li>
+                        <li align="justify" class="descripiton">País já tem a maior rede quântica do mundo, com mais de 80 quilômetros de extensão; protótipo deve ficar pronto em 10 anos</li>
+                        <li class="texto-date"><img class="date" src="./resourses/img/relogio.png" alt="relogio data"> 27/07/2020</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <h1>Here is the footer</h1>
+    <footer class="position-sticky bg-dark">
+        <h1 class="sticky-bottom">Here is the footer</h1>
     </footer>
 
 </body>
