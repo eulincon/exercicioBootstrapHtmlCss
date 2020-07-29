@@ -44,24 +44,30 @@
 
         <div class="card">
             <div class="card-header bg-dark" style="opacity: 0.7;">
-             <p class="text-white"> Contato </p>
+              <p class="text-white"> Contato </p>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Entre em contato conosco ! </h5>
-              <p class="card-text">Fale conosco a respeito de:.</p>
-              <ul>
-                  <li> Dúvidas</li>
-                  <li> Sugestões</li>
-                  <li> Reclamações</li>
-                  <li> Parcerias </li>
-              </ul>
-             
+              <div class="row">
+                <div class ="col-sm">
+                  
+                  <h5 class="card-title">Entre em contato conosco ! </h5>
+                  <p class="card-text">Fale conosco a respeito de:.</p>
+                  <ul>
+                      <li> Dúvidas</li>
+                      <li> Sugestões</li>
+                      <li> Reclamações</li>
+                      <li> Parcerias </li>
+                  </ul>
+                
+                </div>
+                <div class="col-sm text-center">
+                  <img src="./resourses/img/mail.png" class="img-fluid " alt="Responsive image">
+                </div>
+               
+              </div>
+              
             </div>
-          </div>
-        
-    
-
-          
+        </div>
     </main>
 
     <form id = "formulario" class = "container pb-3">
@@ -69,11 +75,11 @@
         <div class="row pb-3">
           <div class="col-sm-4">
            <strong> <label for="inputPrimeiroNome">Nome</label></strong>
-            <input required type="text" class="form-control" placeholder="Primeiro Nome" id= "inputPrimeiroNome">
-          </div>
+           <input required type="text" class="form-control" placeholder="Primeiro Nome" id= "inputPrimeiroNome">
+        </div>
           <div class="col-sm-8">
             <label for="inputSobrenome"><strong> Sobrenome </strong></label>
-            <input required type="text" class="form-control required" placeholder="Sobrenome">
+            <input required type="text" class="form-control required" placeholder="Sobrenome" id="inputSobrenome">
           </div>
         </div>
 
@@ -117,7 +123,7 @@
               </div>
               <div class="modal-body">
                 <img src="./resourses/img/thumbs-up.png" class="img-fluid" alt="Responsive image">
-                <main>  <p> Deseja Confirmar a submissão ?</p></main>
+                 <p> Deseja Confirmar a submissão ?</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
@@ -126,13 +132,11 @@
             </div>
           </div>
         </div>
-
-
     </form> 
 
 
   <!-- Footer -->
-  <footer class="page-footer font-small  pt-4 bg-dark text-white " >
+    <footer class="page-footer font-small  pt-4 bg-dark text-white " >
 
   <!-- Footer Text -->
     <div class="container-fluid text-center mx-auto">
@@ -177,7 +181,7 @@
   </div>
   <!-- Copyright -->
 
-</footer>
+  </footer>
 <!-- Footer -->
 
      <!-- JS, Popper.js, and jQuery-->
@@ -198,28 +202,48 @@
       });
 
       function checkValidation() {
-      var isValid = true;
-      var regexEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      
-      if($("#inputPrimeiroNome").val() == ""){
+
+        var isValid = true;
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        
+        
+        if($("#inputPrimeiroNome").val() == ""){
+            isValid = false;
+            console.log("1");
+
+        }
+        
+        if(   !( $("#inputEmail").val().match(mailFormat) ) )
+        {
           isValid = false;
-      }
-      if(!(regexEmail.test($("#inputEmail").val()))){
-          isValid = false;
-      }
-      if($("#inputSobrenome").val() == ""){
-          isValid = false;
-      }
-      if($("#inputMensagem").val() == ""){
-          isValid = false;
-      }
-      if(isValid){
-      $('#modalDialog').modal('show');
-      }
-      }
+          console.log("2")
+        }
+
+
+        /*
+        if(!(regexEmail.test($("#inputEmail")))){
+            isValid = false;
+            console.log("2");
+
+        } */
+        if($("#inputSobrenome").val() == ""){
+            isValid = false;
+            console.log("3");
+
+        }
+        if($("#inputMensagem").val() == ""){
+            isValid = false;
+            console.log("4");
+
+        }
+        if(isValid){
+        $('#modalDialog').modal('show');
+        }
+        }
 
       function realSubmit()
       {
+
         $( "#formulario").unbind( "submit" );
       }
      
